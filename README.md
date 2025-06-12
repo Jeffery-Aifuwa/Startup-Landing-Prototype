@@ -63,7 +63,7 @@ pm2 startup
 pm2 save
 ```
 - Configured nginx as a reverse proxy
-- Created and nginx block sever with the path of my project folder
+- Created an nginx block sever with the path of my project folder
 - Tested for syntax errors
 ```
 sudo nginx -t
