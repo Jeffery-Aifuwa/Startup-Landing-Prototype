@@ -2,6 +2,9 @@
 
 This project is a dynamic, cloud-hosted landing page prototype created to showcase my technical skills in server provisioning, web server configuration, and full-stack deployment. It features a personalized landing page served via Nginx on an Ubuntu-based AWS EC2 instance, with enhancements such as reverse proxying and HTTPS security enabled through Let’s Encrypt.
 
+- Public IP - 3.250.53.231
+- Domain - thefuture.r-o-o-t.net
+
 ## Steps taken to Setup the server
 1. **Server Provisioning**
 - Launched an AWS EC2 t2.micro instance with Ubuntu 24.04.
