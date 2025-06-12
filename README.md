@@ -22,7 +22,7 @@ sudo systemctl enable nginx
 ```
 sudo systemctl status nginx
 ```
-- Inputted my public IP into the browser for further confirmation
+- Inputted my public IP (3.250.53.231) into the browser for further confirmation
 - Result:
 ![Nginx Status](./Assets/Nginx%20status.png)
 - Installed Node.js:
