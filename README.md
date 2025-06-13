@@ -98,6 +98,7 @@ pm2 restart Startup-Landing-Prototype
 ![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%203.png)
 ![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%204.png)
 ![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%205.png)
+![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%206.png)
 
 
 4. **Networking & Security (Production-Ready)**

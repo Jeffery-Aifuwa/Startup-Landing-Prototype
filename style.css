@@ -8,18 +8,37 @@
 body {
   font-family: 'Outfit', sans-serif;
   background: #000;
-  color: #f1f1f1;
+  color: white;
   padding: 40px;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000;
+  border-bottom: 1px solid #9333ea;
+  margin-bottom: 60px;
+}
+
 .logo img {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto 60px auto;
+  height: 50px;
   filter: drop-shadow(0 0 10px #a855f7);
+}
+
+.logo nav a {
+  margin-left: 20px;
+  color: #f1f1f1;
+  font-weight: 600;
+  transition: color 0.5s ease;
+  text-decoration: none;
+}
+
+.logo nav a:hover {
+  color: #a78bfa;
 }
 
 .container {
@@ -35,24 +54,10 @@ body {
   width: 100%;
 }
 
-.name {
-  font-size: 36px;
-  color: white;
-  margin-bottom: 10px;
-}
-
 .role {
-  font-size: 20px;
+  font-size: 40px;
   color: #a78bfa;
   margin-bottom: 25px;
-}
-
-.title {
-  font-size: 28px;
-  background: linear-gradient(90deg, #a855f7, #9333ea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
 }
 
 .pitch {
@@ -63,11 +68,11 @@ body {
 
 button {
   padding: 10px 20px;
-  color: #9333ea;
+  color: white;
   background: transparent;
   border: 2px solid #9333ea;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   font-size: 15px;
   border-radius: 7px;
   font-family: 'Outfit', sans-serif;
@@ -106,7 +111,7 @@ section h2 {
 section p,
 section ul {
   font-size: 16px;
-  color: #e7e7e7;
+  color: white;
 }
 
 ul {
@@ -155,7 +160,7 @@ ul li {
   animation: scaleIn 0.5s ease-in-out forwards;
 }
 
-/* Responsive Tweaks */
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -167,20 +172,15 @@ ul li {
     width: 100%;
   }
 
-  .name {
-    font-size: 28px;
-  }
-
-  .role, .pitch, section p, section ul {
+  .role,
+  .pitch,
+  section p,
+  section ul {
     font-size: 14px;
   }
 
   section h2 {
     font-size: 20px;
-  }
-
-  .title {
-    font-size: 22px;
   }
 }
 
@@ -194,10 +194,10 @@ ul li {
   text-decoration: underline;
 }
 
-.download-btn {
+.btn {
   display: inline-block;
   padding: 10px 20px;
-  color: #ffffff;
+  color: white;
   background: #9333ea;
   border-radius: 6px;
   font-size: 16px;
@@ -205,6 +205,6 @@ ul li {
   transition: background 0.3s ease;
 }
 
-.download-btn:hover {
+.btn:hover {
   background: #7e22ce;
 }
