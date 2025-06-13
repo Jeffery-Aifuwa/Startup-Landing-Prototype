@@ -94,12 +94,6 @@ pm2 restart Startup-Landing-Prototype
 
 - Final Result:
 ![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%201.png)
-![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%202.png)
-![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%203.png)
-![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%204.png)
-![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%205.png)
-![Startup-Landing-Prototype](./Assets/Startup-Landing-Prototype%206.png)
-
 
 4. **Networking & Security (Production-Ready)**
 - Created a free domain to host my web page: thefuture.r-o-o-t.net

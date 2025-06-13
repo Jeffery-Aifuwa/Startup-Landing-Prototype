@@ -6,12 +6,16 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #000;
   color: white;
   padding: 40px;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
 }
 
 .logo {
@@ -75,7 +79,7 @@ button {
   transition: all 0.5s ease;
   font-size: 15px;
   border-radius: 7px;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 button:hover {
@@ -125,23 +129,51 @@ ul li {
 
 /* Animations */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInLeft {
-  0% { opacity: 0; transform: translateX(-100px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-  0% { opacity: 0; transform: translateX(100px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes scaleIn {
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in {
@@ -207,4 +239,43 @@ ul li {
 
 .btn:hover {
   background: #7e22ce;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header img {
+    margin-bottom: 0.5rem;
+  }
+
+  .identity,
+  .profile {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .identity h3.role {
+    font-size: 28px;
+  }
+
+  .identity .pitch {
+    font-size: 14px;
+  }
+
+  .profile img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn{
+    align-content: center;
+  }
 }
