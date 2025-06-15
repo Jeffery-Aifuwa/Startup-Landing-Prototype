@@ -2,8 +2,26 @@
 
 This project is a dynamic, cloud-hosted landing page prototype created to showcase my technical skills in server provisioning, web server configuration, and full-stack deployment. It features a personalized landing page served via Nginx on an Ubuntu-based AWS EC2 instance, with enhancements such as reverse proxying and HTTPS security enabled through Let’s Encrypt.
 
-- Public IP - 3.250.53.231
-- Domain - thefuture.r-o-o-t.net
+- **Public IP** - 3.250.53.231
+- **Live Site**: [thefuture.r-o-o-t.net](https://thefuture.r-o-o-t.net)  
+- **Repo**: [GitHub - Startup-Landing-Prototype](https://github.com/Jeffery-Aifuwa/Startup-Landing-Prototype)
+
+#### To explore or test the project locally:
+```bash
+git clone https://github.com/Jeffery-Aifuwa/Startup-Landing-Prototype.git
+```
+
+
+## Tech Stack
+
+- AWS EC2 (Ubuntu 24.04)
+- Nginx
+- Node.js + Express
+- PM2
+- HTML & CSS
+- Git & GitHub
+- Certbot (Let’s Encrypt)
+
 
 ## Steps taken to Setup the server
 1. **Server Provisioning**
@@ -25,7 +43,7 @@ sudo systemctl enable nginx
 ```
 sudo systemctl status nginx
 ```
-- Inputted my public IP (3.250.53.231) into the browser for further confirmation
+- Input my public IP (3.250.53.231) into the browser for further confirmation
 - Result:
 ![Nginx Status](./Assets/Nginx%20status.png)
 - Installed Node.js:
@@ -66,7 +84,7 @@ pm2 startup
 pm2 save
 ```
 - Configured nginx as a reverse proxy
-- Created an nginx block sever with the path of my project folder
+- Created a custom Nginx server block pointing to the project’s public directory
 - Tested for syntax errors
 ```
 sudo nginx -t
@@ -75,16 +93,16 @@ sudo nginx -t
 ```
 sudo systemctl restart nginx
 ```
-- Everything worked fine.
+- Nginx successfully forwarded traffic to the Node.js app
 
 3. **Dynamic Landing Page**
 - Built a landing page with HTML & CSS
 - Created a directory named "public" in the project folder
 - Moved my landing page from my local machine to the AWS EC2 sever
 ```
-scp -i /path/to/your-key.pem -r /path/to/landing-page ubuntu@<your-ec2-ip>:/home/ubuntu/
+scp -i ~/path/to/key.pem -r ./landing-page ubuntu@<EC2-IP>:~
 ```
-- Moved the files to the public folder
+- Moved the files to the public folder 
 - Updated my app.js file with the built landing page to replace the placeholders
 - Restarted pm2:
 ```
@@ -104,7 +122,7 @@ sudo apt install certbot python3-certbot-nginx -y
 ```
 - Set nginx block server to the domain name
 - Tested and reloaded nginx
-- Ran certbot
+- Ran Certbot to obtain SSL certificate
 ```
 sudo certbot --nginx -d thefuture.r-o-o-t.net
 ```
@@ -129,14 +147,18 @@ sudo certbot --nginx -d thefuture.r-o-o-t.net
 - **Challenge:** After uploading new content, the site didn’t show updates.
 - **Solution:**  Performed a hard refresh `(Ctrl + F5)` in the browser to clear the cache and load the new version.
 
-4. **Missing Styles on Certain Sections**
-- **Challenge:** The "Contact" and "Download CV" sections were not styled correctly after deployment.
-- **Solution:**  Confirmed that style.css was uploaded and then hard-refreshed the browser, which restored the styling.
+4. **Missing Images After Upload**
+- **Challenge:** Uploaded HTML and CSS files worked, but images didn’t show up on the live site.
+- **Solution:** Zipped the entire landing page directory (including assets), transferred it via SCP, and then unzipped it on the server. This ensured all image files and folder structure remained intact.
 
-5. **Subdomain vs. IP Behavior**
-- **Challenge:** The subdomain showed old content while the public IP returned a 404 error.
-- **Solution:**  Verified the Nginx server block was properly configured for the subdomain and then refreshed the browser cache.
+5. **Missing Styles on Certain Sections**
+- **Challenge:** The "Contact" section was not styled correctly after deployment.
+- **Solution:**  Confirmed that style.css was uploaded and then hard-refreshed the browser, which restored the styling.
 
 6. **Subdomain vs. IP Behavior**
 - **Challenge:** The subdomain showed old content while the public IP returned a 404 error.
 - **Solution:**  Verified the Nginx server block was properly configured for the subdomain and then refreshed the browser cache.
+
+## Conclusion
+
+This project demonstrates my ability to provision a cloud server, configure a web server, deploy a full-stack application, implement HTTPS using Let’s Encrypt, and troubleshoot deployment issues.
