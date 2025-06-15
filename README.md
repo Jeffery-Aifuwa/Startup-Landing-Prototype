@@ -30,7 +30,7 @@ git clone https://github.com/Jeffery-Aifuwa/Startup-Landing-Prototype.git
 - Launched an AWS EC2 t2.micro instance with Ubuntu 24.04.
 - Configured the security group to allow ports 22, 80 and 443.
 
-### 2. **Web Server**
+### 2. **Web Server Configuration**
 
 - Installed nginx:
 ```
